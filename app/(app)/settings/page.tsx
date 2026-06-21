@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
 
 const OPENROUTER_MODELS = [
+  { label: "GPT-OSS 120B (free)", value: "openai/gpt-oss-120b:free" },
   { label: "Mistral 7B (free)", value: "mistralai/mistral-7b-instruct:free" },
   { label: "Llama 3.1 8B (free)", value: "meta-llama/llama-3.1-8b-instruct:free" },
   { label: "Qwen2.5 7B (free)", value: "qwen/qwen-2.5-7b-instruct:free" },
