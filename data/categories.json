@@ -1,0 +1,22 @@
+[
+  { "name": "Food & Drink", "slug": "food-drink", "color": "orange", "icon": "🍎" },
+  { "name": "Travel & Transport", "slug": "travel", "color": "blue", "icon": "✈️" },
+  { "name": "Body & Health", "slug": "health", "color": "red", "icon": "❤️" },
+  { "name": "Home & Living", "slug": "home", "color": "green", "icon": "🏠" },
+  { "name": "Work & Business", "slug": "work", "color": "purple", "icon": "💼" },
+  { "name": "Nature & Weather", "slug": "nature", "color": "teal", "icon": "🌿" },
+  { "name": "Time & Calendar", "slug": "time", "color": "yellow", "icon": "⏰" },
+  { "name": "Shopping", "slug": "shopping", "color": "pink", "icon": "🛍️" },
+  { "name": "Emotions & Feelings", "slug": "emotions", "color": "indigo", "icon": "😊" },
+  { "name": "People & Family", "slug": "people", "color": "amber", "icon": "👨‍👩‍👧" },
+  { "name": "Numbers & Quantities", "slug": "numbers", "color": "cyan", "icon": "🔢" },
+  { "name": "Colors & Shapes", "slug": "colors", "color": "lime", "icon": "🎨" },
+  { "name": "Technology", "slug": "technology", "color": "slate", "icon": "💻" },
+  { "name": "Education", "slug": "education", "color": "violet", "icon": "📚" },
+  { "name": "Sports & Leisure", "slug": "sports", "color": "emerald", "icon": "⚽" },
+  { "name": "Animals", "slug": "animals", "color": "brown", "icon": "🐾" },
+  { "name": "Clothing", "slug": "clothing", "color": "rose", "icon": "👕" },
+  { "name": "City & Places", "slug": "city", "color": "zinc", "icon": "🏙️" },
+  { "name": "Verbs (Common)", "slug": "verbs", "color": "sky", "icon": "⚡" },
+  { "name": "Adjectives (Common)", "slug": "adjectives", "color": "fuchsia", "icon": "✨" }
+]
