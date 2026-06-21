@@ -24,9 +24,10 @@ export async function POST(req: Request) {
   // Update streak
   const user = await db.user.findUnique({ where: { id: userId } });
   if (user) {
-    const today = new Date().toDateString();
-    const lastDate = user.lastStreakDate?.toDateString();
-    const yesterday = new Date(Date.now() - 86400000).toDateString();
+    const toUTCDate = (d: Date) => d.toISOString().slice(0, 10);
+    const today = toUTCDate(new Date());
+    const lastDate = user.lastStreakDate ? toUTCDate(user.lastStreakDate) : null;
+    const yesterday = toUTCDate(new Date(Date.now() - 86400000));
 
     let newStreak = user.currentStreak;
     if (lastDate === today) {

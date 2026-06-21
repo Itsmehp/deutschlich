@@ -29,15 +29,13 @@ export async function GET() {
   });
 
   // Create UserCard rows for new words (lazy init)
-  for (const word of newWords) {
-    if (!existingWordIds.has(word.id)) {
-      await db.userCard.upsert({
-        where: { userId_wordId: { userId, wordId: word.id } },
-        update: {},
-        create: { userId, wordId: word.id },
-      });
-    }
-  }
+  await db.userCard.createMany({
+    data: newWords.map((word) => ({
+      userId,
+      wordId: word.id,
+    })),
+    skipDuplicates: true,
+  });
 
   const newCards = await db.userCard.findMany({
     where: { userId, wordId: { in: newWords.map((w) => w.id) } },

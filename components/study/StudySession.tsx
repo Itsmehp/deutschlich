@@ -32,7 +32,8 @@ export function StudySession() {
       .then((json) => {
         setCards(json.data ?? []);
         setLoading(false);
-      });
+      })
+      .catch(() => { setCards([]); setLoading(false); });
   }, []);
 
   async function handleRate(rating: 1 | 2 | 3 | 4) {
@@ -72,7 +73,8 @@ export function StudySession() {
     setLoading(true);
     fetch("/api/study/cards")
       .then((r) => r.json())
-      .then((json) => { setCards(json.data ?? []); setLoading(false); });
+      .then((json) => { setCards(json.data ?? []); setLoading(false); })
+      .catch(() => { setCards([]); setLoading(false); });
   }
 
   if (loading) return <div className="text-center py-20 text-muted-foreground">Loading cards...</div>;

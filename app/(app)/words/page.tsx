@@ -47,7 +47,8 @@ export default function WordsPage() {
         setWords(json.data ?? []);
         setTotal(json.total ?? 0);
         setPages(json.pages ?? 1);
-      });
+      })
+      .catch(() => { setWords([]); });
   }, [q, level, page, categoryParam]);
 
   return (

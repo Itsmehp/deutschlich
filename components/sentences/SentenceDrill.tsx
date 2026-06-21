@@ -24,7 +24,8 @@ interface Props {
 }
 
 function blankWord(sentence: string, bare: string): string {
-  return sentence.replace(new RegExp(bare, "gi"), "_____");
+  const escaped = bare.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return sentence.replace(new RegExp(escaped, "gi"), "_____");
 }
 
 export function SentenceDrill({ word }: Props) {
